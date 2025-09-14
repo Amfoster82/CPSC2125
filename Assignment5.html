@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Grid Layout with Semantic Tags</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+  }
+
+  header {
+    grid-column: 1 / 4; /* spans all 3 columns */
+    grid-row: 1;
+    background-color: #f8b400;
+  }
+
+  nav {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #4a86e8;
+  }
+
+  main {
+    grid-column: 2 / 4; /* spans columns 2 and 3 */
+    grid-row: 2;
+    background-color: #70ad47;
+  }
+
+  aside {
+    grid-column: 1;
+    grid-row: 3;
+    background-color: #9f6faf;
+  }
+
+  footer {
+    grid-column: 2 / 4; /* spans columns 2 and 3 */
+    grid-row: 3;
+    background-color: #d05656;
+  }
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main Content</main>
+  <aside>Aside Content</aside>
+  <footer>Footer</footer>
+</div>
+</body>
+</html>

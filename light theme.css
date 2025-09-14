@@ -1,0 +1,47 @@
+/* style1.css: Light theme */
+body {
+  background-color: lab(85.06% 3.79 1.35 / 0.877);
+  color: #000000;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+header {
+  background-color: #f4f4f4;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 2px solid #ccc;
+}
+
+h1 {
+  color: #333333;
+  font-size: 28px;
+}
+
+h2 {
+  color: #5b8b8f;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #0041cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+    color: black;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #2b0707;
+  padding-top: 10px;
+}

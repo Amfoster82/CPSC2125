@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Custom Grid Layout</title>
+<style>
+  .grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+  }
+
+  /* Row 1: Main spanning all columns */
+  main {
+    grid-column: 1 / 4; /* spans all columns */
+    grid-row: 1;
+    background-color: #f4a261;
+  }
+
+  /* Row 2: nav, main, aside */
+  nav {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #2a9d8f;
+  }
+
+  /* Main in row 2, middle column */
+  .middle-main {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: #e76f51;
+  }
+
+  /* Aside in row 2, last column */
+  aside {
+    grid-column: 3;
+    grid-row: 2;
+    background-color: #264653;
+  }
+
+  /* Row 3: Footer spanning all columns */
+  footer {
+    grid-column: 1 / 4; /* spans all columns */
+    grid-row: 3;
+    background-color: #8ab17d;
+  }
+</style>
+</head>
+<body>
+<div class="grid-container">
+    <main>Main Content</main> <!-- Row 1, spans all columns -->
+    <nav>Navigation</nav> <!-- Row 2, col 1 -->
+    <div class="middle-main">Main Middle</div> <!-- Row 2, middle column -->
+    <aside>Side Content</aside> <!-- Row 2, col 3 -->
+    <footer>Footer</footer> <!-- Row 3, spans all columns -->
+</div>
+</body>
+</html>

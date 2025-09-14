@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- Saheed Bola - Assignment 3 -->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Assignment 5</title> <!-- Title displayed in browser tab -->
+<link href="Dtheme.css" rel="stylesheet" type="text/css"> <!-- Style link -->
+<style>
+  /* Styles for the grid container and semantic tags */
+  .grid-container {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  header {
+    grid-column: 1 / 4; /* spans all 3 columns */
+    grid-row: 1;
+    background-color: #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Place nav if needed in second row */
+  nav {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #aaf;
+    padding: 10px;
+  }
+
+  /* Main content in second row, middle column */
+  main {
+    grid-column: 2 / 4; /* spans columns 2 and 3 */
+    grid-row: 2;
+    background-color: #afa;
+    padding: 10px;
+  }
+
+  /* Sidebar in second row, last column */
+  aside {
+    grid-column: 3;
+    grid-row: 2;
+    background-color: #faa;
+    padding: 10px;
+  }
+
+  /* Footer spans all three columns in third row */
+  footer {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    background-color: #ffa;
+    padding: 10px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<!-- Main grid container -->
+<div class="grid-container">
+  <header>Assignment 5</header>
+  <!-- Optional nav section inside the grid -->
+  <!--
+  <nav>Navigation</nav>
+  -->
+  <main>
+    <h1>Welcome to My Favorite Website</h1>
+    <h2>Learn and Explore</h2>
+    <p>This is my personal webpage created for my assignment. I hope you find it interesting and informative!</p>
+    <a href="https://www.amazon.com" target="_blank">Visit amazon</a>
+    <br><br>
+    <img src="Jordan 4.jpg" alt="Sneakers displayed" width="600" height="400" />
+  </main>
+  <footer>Saheed Bola - Assignment 5</footer>
+</div>
+</body>
+</html>

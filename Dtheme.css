@@ -1,0 +1,47 @@
+/* style2.css: Dark theme */
+body {
+  background-color: #222;
+  color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+header {
+  background-color: #444;
+  padding: 10px;
+  font-size: 24px;
+  text-align: center;
+  border-bottom: 2px solid #888;
+}
+
+h1 {
+  color: #ffd700; /* Gold color */
+  font-size: 28px;
+}
+
+h2 {
+  color: #ccc;
+  font-size: 24px;
+}
+
+p {
+  font-size: 16px;
+}
+
+a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+    color: #ffd700;
+  margin-top: 20px;
+  font-size: 14px;
+  text-align: center;
+  border-top: 2px solid #888;
+  padding-top: 10px;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Semantic Grid Container</title>
+<style>
+  /* Grid container styles */
+  .grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    padding: 10px;
+  }
+
+  /* Style for semantic tags within container */
+
+  header {
+    grid-column: 1 / 4; /* spans all columns in first row */
+    grid-row: 1;
+    background-color: #f4a261;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  nav {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: #2a9d8f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  main {
+    grid-column: 2 / 4; /* span columns 2-3 in second row */
+    grid-row: 2;
+    background-color: #e76f51;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  aside {
+    grid-column: 3;
+    grid-row: 2;
+    background-color: #264653;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  footer {
+    grid-column: 1 / 4; /* spans all columns in third row */
+    grid-row: 3;
+    background-color: #8ab17d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+</style>
+</head>
+<body>
+
+<!-- Main container for the grid layout -->
+<div class="grid-container">
+  <header>Header</header>
+  <nav>Navigation</nav>
+  <main>Main Content</main>
+  <aside>Side Content</aside>
+  <footer>Footer</footer>
+</div>
+
+</body>
+</html>
