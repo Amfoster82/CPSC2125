@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shoe Collector</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Shoe Collection</h1>
+  </header>
+
+  <nav class="nav primary-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="register.html">Form</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>My Passion for Shoes</h2>
+      <p>My passion for Jordan sneakers started at a young age when I first saw the iconic designs and bold colors of these shoes. Besides their stylish appearance, Jordan sneakers represent more than just footwear; they symbolize history, culture, and excellence in sports. Michael Jordan’s legendary career and his influence on global basketball culture inspired me to appreciate the craftsmanship and innovation behind each pair. Collecting Jordans has become a hobby that allows me to connect with a rich heritage, as I learn about different models, special editions, and the stories behind them. I love the thrill of hunting for limited releases and adding rare sneakers to my collection. Each pair I own has a unique story or memory attached to it, making the experience even more meaningful. Beyond their aesthetics, Jordan sneakers inspire me to pursue my passion, stay dedicated, and celebrate creativity. They motivate me to express my style and stand out in the crowd. My fascination with Jordan sneakers has grown into a lifelong appreciation for their design, history, and the culture they represent, and I enjoy sharing this passion with others who appreciate the legacy of the Air Jordan brand.</p>
+    </section>
+    <section class="images-section">
+      <h3>My Favorite Jordans</h3>
+      <div class="images-row">
+        <img src="images/jordan3.png" alt="Air Jordan 3">
+        <h3>Air Jordan 3</h3>
+        <img src="images/jordan4.png" alt="Air Jordan 4">
+        <h3>Air Jordan 4</h3>
+        <img src="images/jordan5.png" alt="Air Jordan 5">
+        <h3>Air Jordan 5</h3>
+      </div>
+    </section>
+  </main>
+
+  <footer class="primary-footer container group">
+    
+    <small>&copy; Shoe Collector</small>
+     <p id="clock">Loading current time...</p>
+    <nav class="nav primary-nav">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="register.html">Form</a></li>
+    </ul>
+  </nav>
+  </footer>
+  <script>
+function updateTime() {
+  const timeElement = document.getElementById('clock');
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  timeElement.textContent = `Current Time: ${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
+</body>
+</html>
