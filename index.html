@@ -2,36 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="cssfiletesting.css" rel="stylesheet" type="text/css"> <title>Hello Semantic HTML</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5 Assignment</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Semantic HTML</h1>
-        <nav>
-            <ul>
-                <li><a href="#main">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+
+    <!-- Header -->
+    <header class="container-fluid bg-light text-center p-3">
+        <h1>Responsive/Mobile Design w/Bootstrap 5</h1>
     </header>
-    <main id="main">
-        <section id="about">
-            <h2>About</h2>
-            <p>This is a simple HTML template using semantic tags for better structure and accessibility.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <address>
-                Email: <a href="mailto:funsaah@gmail.com">info@example.com</a><br>
-                Phone: <a href="tel:+13477828436">+1 234 567 890</a>
-            </address>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Semantic HTML Example</p>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.columbusstate.edu/" target="_blank">CSU Website</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.nike.com//" target="_blank">Nike Website</a>
+                    </li>
+                
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Main 1</h2>
+                <!-- Table -->
+               <style>
+/* Add padding to table cells */
+.table td {
+    padding: 15px; /* Adjust the padding value as needed */
+    vertical-align: middle; /* Center content vertically (optional) */
+}
+
+/* Optional: Increase font size for better readability */
+.table td {
+    font-size: 16px; /* Adjust the font size as needed */
+}
+</style>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Some document content</td>
+            <td>Other document content</td>
+        </tr>
+        <tr>
+            <td>More content</td>
+            <td>Even more content</td>
+        </tr>
+        <tr>
+            <td>Additional content</td>
+            <td>Extra content</td>
+        </tr>
+    </tbody>
+</table>
+
+            </div>
+            <div class="col-md-6">
+                <h2>Main 2</h2>
+                <!-- Image Carousel -->
+                <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="images/jordanlogo.jpeg" class="d-block w-100" alt="Jordan Logo"
+                            style="height:400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/jordan3.png" class="d-block w-100" alt="Pure Money"
+                            style="height:400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/jordan4.png" class="d-block w-100" alt="White Thunder"
+                            style="height:400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/Rare Air 4.png" class="d-block w-100" alt="Rare Air 4"
+                            style="height:400px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/jordan5.png" class="d-block w-100" alt="Varsity Maize and Wolf Grey"
+                            style="height:400px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="container-fluid bg-light text-center p-3 mt-3">
+       <p>Designed by Saheed Bola | Fall 2025</p>
+ <p id="clock">Loading current time...</p>
     </footer>
+<script>
+function updateTime() {
+  const timeElement = document.getElementById('clock');
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, '0');
+  const minutes = now.getMinutes().toString().padStart(2, '0');
+  const seconds = now.getSeconds().toString().padStart(2, '0');
+  timeElement.textContent = `Current Time: ${hours}:${minutes}:${seconds}`;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
+</script>
 </body>
 </html>
